@@ -1,0 +1,22 @@
+﻿@model SkillCard_CodeFirstEntity.Models.Classes.Skill
+@{
+    ViewBag.Title = "NewSkill";
+    Layout = "~/Views/Shared/_LayoutNavBar.cshtml";
+}
+
+<form class="form-group" method="post">
+    <div style="margin-bottom:20px">
+        <label>Skill Explanation</label>
+        @Html.TextBoxFor(x=>x.Explanation, new { @class="form-control"})
+
+    </div>
+    <div style="margin-bottom:20px">
+        <label>Skill Value</label>
+        @Html.TextBoxFor(x=> x.Value, new  { @class="form-control"})
+    </div>
+
+    <div>
+        <button class="btn btn-primary">Save</button>
+    </div>
+</form>
+

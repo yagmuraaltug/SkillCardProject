@@ -1,0 +1,32 @@
+﻿@using SkillCard_CodeFirstEntity.Models.Classes
+@model List<Skill>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutNavBar.cshtml";
+}
+
+<table class="table table-bordered">
+
+    <tr>
+        <th>ID</th>
+        <th>SKILL</th>
+        <th>VALUE</th>
+        <th>DELETE</th>
+        <th>UPDATE</th>
+
+
+    </tr>
+    @foreach (var p in Model)
+    {
+<tr>
+    <td>@p.Id</td>
+    <td>@p.Explanation</td>
+    <td>@p.Value</td>
+    <td><a href="/Admin/DeleteSkill/@p.Id" class="btn btn-danger">Delete</a></td>
+    <td><a href="/Admin/BringSkill/@p.Id" class="btn btn-success">Update</a></td>
+
+
+</tr>
+    }
+</table>
+
